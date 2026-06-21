@@ -1,0 +1,3 @@
+body[data-page="product-detail"] {
+  background-color: var(--color-background);
+}
