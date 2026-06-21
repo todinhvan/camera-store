@@ -1,0 +1,592 @@
+<!doctype html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>About Us | Camera Store</title>
+    <meta name="description" content="Learn more about Camera Store, our history, our mission to provide the best photography gear, and our dedicated team of photography experts." />
+    <meta name="keywords" content="about camera store, photography experts, camera shop history, photography gear store" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://yourcamerastore.com/pages/about.html" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourcamerastore.com/pages/about.html" />
+    <meta property="og:title" content="About Us | Camera Store" />
+    <meta property="og:description" content="Learn more about Camera Store, our mission to provide the best photography gear, and our dedicated team of photography experts." />
+    <meta property="og:image" content="https://yourcamerastore.com/assets/images/about-og.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://yourcamerastore.com/pages/about.html" />
+    <meta property="twitter:title" content="About Us | Camera Store" />
+    <meta property="twitter:description" content="Learn more about Camera Store, our mission to provide the best photography gear, and our dedicated team of photography experts." />
+    <meta property="twitter:image" content="https://yourcamerastore.com/assets/images/about-og.jpg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="../js/tailwind-config.js?v=20260621b"></script>
+    <link href="../css/reset.css" rel="stylesheet" />
+    <link href="../css/variables.css" rel="stylesheet" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/layout.css" rel="stylesheet" />
+    <link href="../css/components.css" rel="stylesheet" />
+    <link href="../css/pages/about.css" rel="stylesheet" />
+  </head>
+  <body
+    data-page="about"
+    class="bg-background text-on-background font-body-md min-h-screen flex flex-col"
+  >
+    <!-- Top Info Bar -->
+    <div
+      class="bg-primary text-on-primary py-2 px-margin-mobile md:px-margin-desktop text-label-sm font-label-sm hidden md:flex justify-between items-center"
+    >
+      <div class="flex items-center gap-4">
+        <span class="flex items-center gap-1"
+          ><span class="material-symbols-outlined text-[16px]">call</span>
+          Hotline: +84 (28) 3822 1234</span
+        >
+        <span class="flex items-center gap-1"
+          ><span class="material-symbols-outlined text-[16px]"
+            >location_on</span
+          >
+          Find a Store</span
+        >
+      </div>
+      <div class="flex items-center gap-4">
+        <a class="hover:text-secondary transition-colors" href="./contact.html"
+          >Support</a
+        >
+        <a class="hover:text-secondary transition-colors" href="./cart.html"
+          >Track Order</a
+        >
+      </div>
+    </div>
+    <!-- Main Navigation -->
+    <header
+      class="bg-surface/90 backdrop-blur-md dark:bg-inverse-surface/90 text-primary dark:text-inverse-primary border-b border-outline-variant dark:border-outline shadow-sm dark:shadow-none sticky top-0 w-full z-50 transition-all duration-300"
+      id="main-nav"
+    >
+      <div
+        class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col justify-center h-auto md:h-20 py-4 md:py-0"
+      >
+        <div class="flex items-center justify-between gap-4 md:gap-8">
+          <a
+            class="text-headline-md font-headline-md font-bold tracking-tighter text-primary dark:text-inverse-primary shrink-0 flex items-center gap-2"
+            href="../index.html"
+          >
+            <span
+              class="material-symbols-outlined text-[28px] fill text-primary"
+              >camera</span
+            >
+            Camera Store
+          </a>
+          <div class="flex-1 max-w-2xl hidden md:flex relative group">
+            <input
+              class="w-full bg-surface-container-low border border-outline-variant rounded-full py-2 px-6 pl-12 focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all font-body-md text-body-md placeholder:text-outline text-on-surface group-hover:bg-surface-container-high"
+              placeholder="Search for cameras, lenses, accessories..."
+              type="text"
+            />
+            <span
+              class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline"
+              >search</span
+            >
+          </div>
+          <div class="flex items-center gap-2 md:gap-4 shrink-0">
+            <a
+              aria-label="About Us"
+              class="p-2 text-on-surface-variant hover:bg-surface-container-low rounded-full transition-all duration-200 hover:text-primary active:opacity-80 active:scale-95 hidden md:flex"
+              href="./about.html"
+            >
+              <span class="material-symbols-outlined">person</span>
+            </a>
+            <a
+              aria-label="Contact Us"
+              class="p-2 text-on-surface-variant hover:bg-surface-container-low rounded-full transition-all duration-200 hover:text-primary active:opacity-80 active:scale-95"
+              href="./contact.html"
+            >
+              <span class="material-symbols-outlined">favorite</span>
+            </a>
+            <a
+              aria-label="Shopping Cart"
+              class="p-2 text-on-surface-variant hover:bg-surface-container-low rounded-full transition-all duration-200 hover:text-primary active:opacity-80 active:scale-95 relative"
+              href="./cart.html"
+            >
+              <span class="material-symbols-outlined">shopping_cart</span>
+              <span
+                class="absolute top-1 right-1 w-2 h-2 bg-secondary rounded-full"
+              ></span>
+            </a>
+            <button
+              aria-label="Menu"
+              class="p-2 text-on-surface-variant hover:bg-surface-container-low rounded-full transition-all duration-200 hover:text-primary md:hidden"
+              id="mobile-menu-btn"
+            >
+              <span class="material-symbols-outlined">menu</span>
+            </button>
+          </div>
+        </div>
+        <nav
+          aria-label="Main Navigation"
+          class="hidden md:flex items-center justify-center gap-8 mt-4 md:mt-0 pt-2 md:pt-0"
+        >
+          <a
+            class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors font-label-md text-label-md"
+            href="./product-list.html"
+            >Cameras</a
+          >
+          <a
+            class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors font-label-md text-label-md"
+            href="./product-list.html"
+            >Lenses</a
+          >
+          <a
+            class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors font-label-md text-label-md"
+            href="./product-list.html"
+            >Used Gear</a
+          >
+          <a
+            class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors font-label-md text-label-md"
+            href="./product-list.html"
+            >Action Cameras</a
+          >
+          <a
+            class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors font-label-md text-label-md"
+            href="./product-list.html"
+            >Drones</a
+          >
+          <a
+            class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors font-label-md text-label-md"
+            href="./product-list.html"
+            >Studio</a
+          >
+        </nav>
+      </div>
+    </header>
+    <div
+      class="fixed inset-0 bg-surface z-40 transform translate-x-full transition-transform duration-300 md:hidden pt-24 px-margin-mobile flex flex-col gap-6"
+      id="mobile-menu"
+    >
+      <div class="relative">
+        <input
+          class="w-full bg-surface-container-low border border-outline-variant rounded-full py-2 px-6 pl-12 focus:outline-none focus:ring-2 focus:ring-secondary font-body-md text-body-md"
+          placeholder="Search..."
+          type="text"
+        />
+        <span
+          class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline"
+          >search</span
+        >
+      </div>
+      <nav class="flex flex-col gap-4 font-headline-md text-headline-md">
+        <a
+          class="text-on-surface-variant pl-4 hover:text-primary"
+          href="./product-list.html"
+          >Cameras</a
+        >
+        <a
+          class="text-on-surface-variant pl-4 hover:text-primary"
+          href="./product-list.html"
+          >Lenses</a
+        >
+        <a
+          class="text-on-surface-variant pl-4 hover:text-primary"
+          href="./product-list.html"
+          >Used Gear</a
+        >
+        <a
+          class="text-on-surface-variant pl-4 hover:text-primary"
+          href="./product-list.html"
+          >Action Cameras</a
+        >
+        <a
+          class="text-on-surface-variant pl-4 hover:text-primary"
+          href="./product-list.html"
+          >Drones</a
+        >
+        <a
+          class="text-on-surface-variant pl-4 hover:text-primary"
+          href="./product-list.html"
+          >Studio</a
+        >
+      </nav>
+    </div>
+    <!-- Main Content -->
+    <main class="flex-grow pb-section-gap">
+      <!-- Hero Section -->
+      <section
+        class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-section-gap"
+      >
+        <div class="text-center mb-12">
+          <h1
+            class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6"
+          >
+            Empowering Visionaries Since 2014
+          </h1>
+          <p
+            class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto"
+          >
+            We are more than just a retailer; we are a dedicated community of
+            photography enthusiasts committed to providing premium tools for
+            visual storytelling.
+          </p>
+        </div>
+        <div
+          class="w-full h-[614px] rounded-[24px] overflow-hidden shadow-sm border border-outline-variant"
+        >
+          <div
+            class="bg-cover bg-center w-full h-full"
+            data-alt="A modern, brightly lit photography studio workshop. High-end camera equipment, lenses, and lighting rigs are visible. A professional photographer is carefully adjusting a sophisticated camera setup. The scene is shot with an emphasis on precise geometry, deep blacks contrasting with pristine whites, and subtle accents of camera-red on the equipment. The mood is focused, technical, and premium."
+            style="
+              background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDHSov5fKSOve4jAGFgUmJCAWehc7qRKDOXtfzaLr8K97-XBgxOGAKMClJRuTVHP25urn5kMwILsaLOl9aFxfyL4VgcDDb6rxxr7GDCkSbV-1cMdw0RDlm829hBfX69VtG6LjGG33Z3Ns8tUEZWIx7GrcrKSHiyL8qBJDcQhYECkpCMitqAk33TZ0P0jF-KcQiCUt-2SaiUH90-pr_UFlQ0cuvj-py1RsjZ-Bf1UHgLcvTMnHN5CVOlYO7Bt7ik2JYnemy1tPebnnU&quot;);
+            "
+          ></div>
+        </div>
+      </section>
+      <!-- Our Story -->
+      <section class="bg-surface-bright py-section-gap">
+        <div
+          class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop"
+        >
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+            <div>
+              <h2
+                class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6"
+              >
+                Our Story
+              </h2>
+              <div
+                class="font-body-md text-body-md text-on-surface-variant space-y-4"
+              >
+                <p>
+                  Starting as a humble, passionate retailer in Vietnam, Camera
+                  Store was founded on a simple principle: to bring precision
+                  engineering to local visionaries. In our early days, we
+                  focused on curating reliable, high-performance gear for a
+                  small but growing community of professionals.
+                </p>
+                <p>
+                  Over the years, as the visual landscape evolved, so did we. We
+                  expanded our inventory to include the latest in mirrorless
+                  technology, cinema cameras, and studio equipment, becoming a
+                  premier destination for creators.
+                </p>
+                <p>
+                  Today, our commitment remains unchanged. We provide not just
+                  equipment, but expertise, ensuring every photographer and
+                  filmmaker has the exact tools they need to execute their
+                  vision flawlessly.
+                </p>
+              </div>
+            </div>
+            <div
+              class="rounded-[24px] overflow-hidden shadow-sm border border-outline-variant h-[400px]"
+            >
+              <div
+                class="bg-cover bg-center w-full h-full grayscale opacity-90"
+                data-alt="An artistic, high-contrast black and white photograph of vintage film cameras carefully arranged on a clean, modern surface. The lighting is dramatic, highlighting the intricate mechanical details, dials, and glass elements of the lenses. The composition is minimalist and structured, emphasizing precision and the heritage of photography."
+                style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCFKDcVw27vn0K3Z1Z6CPmWVm5U0-lG6HHZWpcz1HYLgut4aISl_tYha8JqtTSp0ADmgL5I2X95FHeaYmsJZU6qIzPkcBNSL7hAMqPUgzRAhIO-efw32EMvUbZpTLBIMibs-nQEYwLUevz7g9AZ8RTMm7n4m1Q5xeRoUKfQFXa6WZt7QFcc6C-sNLAB5JxdLPUGv7F4ZD6HDuKOpzrMeDQzq9B6rwU3U7ZWHhSBiLxFCUsD8aY11qx4taKw-5ka_dEbBhIpwoRVglo&quot;);
+                "
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Core Values -->
+      <section
+        class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap"
+      >
+        <div class="text-center mb-12">
+          <h2
+            class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary"
+          >
+            Our Core Values
+          </h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+          <!-- Value 1 -->
+          <div
+            class="bg-surface rounded-xl p-8 border border-outline-variant shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:-translate-y-1 transition-transform duration-300"
+          >
+            <div
+              class="w-12 h-12 bg-surface-container-low rounded-full flex items-center justify-center mb-6"
+            >
+              <span
+                class="material-symbols-outlined text-primary"
+                data-icon="architecture"
+                >architecture</span
+              >
+            </div>
+            <h3 class="font-headline-md text-headline-md text-primary mb-2">
+              Precision
+            </h3>
+            <p class="font-body-md text-body-md text-on-surface-variant">
+              We curate only the finest gear, ensuring uncompromised optical
+              quality and mechanical reliability.
+            </p>
+          </div>
+          <!-- Value 2 -->
+          <div
+            class="bg-surface rounded-xl p-8 border border-outline-variant shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:-translate-y-1 transition-transform duration-300"
+          >
+            <div
+              class="w-12 h-12 bg-surface-container-low rounded-full flex items-center justify-center mb-6"
+            >
+              <span
+                class="material-symbols-outlined text-primary"
+                data-icon="school"
+                >school</span
+              >
+            </div>
+            <h3 class="font-headline-md text-headline-md text-primary mb-2">
+              Expertise
+            </h3>
+            <p class="font-body-md text-body-md text-on-surface-variant">
+              Staffed by professional photographers who understand the technical
+              demands of your craft.
+            </p>
+          </div>
+          <!-- Value 3 -->
+          <div
+            class="bg-surface rounded-xl p-8 border border-outline-variant shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:-translate-y-1 transition-transform duration-300"
+          >
+            <div
+              class="w-12 h-12 bg-surface-container-low rounded-full flex items-center justify-center mb-6"
+            >
+              <span
+                class="material-symbols-outlined text-primary"
+                data-icon="groups"
+                >groups</span
+              >
+            </div>
+            <h3 class="font-headline-md text-headline-md text-primary mb-2">
+              Community
+            </h3>
+            <p class="font-body-md text-body-md text-on-surface-variant">
+              Supporting the local creative ecosystem through workshops, events,
+              and shared knowledge.
+            </p>
+          </div>
+          <!-- Value 4 -->
+          <div
+            class="bg-surface rounded-xl p-8 border border-outline-variant shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:-translate-y-1 transition-transform duration-300"
+          >
+            <div
+              class="w-12 h-12 bg-surface-container-low rounded-full flex items-center justify-center mb-6"
+            >
+              <span
+                class="material-symbols-outlined text-secondary"
+                data-icon="lightbulb"
+                >lightbulb</span
+              >
+            </div>
+            <h3 class="font-headline-md text-headline-md text-primary mb-2">
+              Innovation
+            </h3>
+            <p class="font-body-md text-body-md text-on-surface-variant">
+              Always ahead with the latest imaging tech, helping you push the
+              boundaries of visual media.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Expert Support -->
+      <section class="bg-surface-container-low py-section-gap">
+        <div
+          class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center"
+        >
+          <h2
+            class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6"
+          >
+            Expert Support
+          </h2>
+          <p
+            class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto mb-8"
+          >
+            Behind every great photograph is not just a great camera, but the
+            knowledge to use it. Our team consists of active industry
+            professionals—cinematographers, portrait artists, and tech
+            specialists—ready to advise you on building the perfect rig for your
+            next assignment.
+          </p>
+          <a
+            class="inline-flex bg-primary text-on-primary font-label-md text-label-md px-[32px] py-[16px] rounded-lg hover:bg-primary/90 transition-colors"
+            href="./contact.html"
+          >
+            Contact Our Experts
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="bg-primary dark:bg-surface-container-highest text-on-primary dark:text-on-surface w-full pt-section-gap pb-8"
+    >
+      <div
+        class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter mb-16"
+      >
+        <div class="col-span-1">
+          <a
+            class="text-headline-lg font-headline-lg font-black text-on-primary dark:text-on-surface flex items-center gap-2 mb-6"
+            href="../index.html"
+          >
+            <span class="material-symbols-outlined text-[32px] fill"
+              >camera</span
+            >
+            Camera Store
+          </a>
+          <p
+            class="font-body-md text-body-md text-on-primary/70 dark:text-on-surface-variant/70 mb-6"
+          >
+            Precision Engineering for Professionals. Equipping creators with the
+            finest imaging technology.
+          </p>
+          <div class="flex items-center gap-4">
+            <a
+              class="w-10 h-10 rounded-full bg-surface-container-highest/20 flex items-center justify-center hover:bg-secondary transition-colors text-on-primary"
+              href="./about.html"
+            >
+              <span class="material-symbols-outlined text-[20px]">share</span>
+            </a>
+            <a
+              class="w-10 h-10 rounded-full bg-surface-container-highest/20 flex items-center justify-center hover:bg-secondary transition-colors text-on-primary"
+              href="./contact.html"
+            >
+              <span class="material-symbols-outlined text-[20px]"
+                >photo_camera</span
+              >
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-headline-md text-[18px] mb-6 font-semibold">Shop</h4>
+          <ul class="flex flex-col gap-4 font-body-md text-body-md">
+            <li>
+              <a
+                class="text-on-primary/70 hover:text-on-primary transition-colors"
+                href="./product-list.html"
+                >Cameras</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-primary/70 hover:text-on-primary transition-colors"
+                href="./product-list.html"
+                >Lenses</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-primary/70 hover:text-on-primary transition-colors"
+                href="./product-list.html"
+                >Drones</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-primary/70 hover:text-on-primary transition-colors"
+                href="./product-list.html"
+                >Used Gear</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-secondary font-bold hover:text-secondary-container transition-colors"
+                href="./product-list.html"
+                >Special Offers</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-headline-md text-[18px] mb-6 font-semibold">
+            Support
+          </h4>
+          <ul class="flex flex-col gap-4 font-body-md text-body-md">
+            <li>
+              <a
+                class="text-on-primary/70 hover:text-on-primary transition-colors"
+                href="./contact.html"
+                >Contact Us</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-primary/70 hover:text-on-primary transition-colors"
+                href="./about.html"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-primary/70 hover:text-on-primary transition-colors"
+                href="./cart.html"
+                >Track Order</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-primary/70 hover:text-on-primary transition-colors"
+                href="./product-detail-sony-a7rv.html"
+                >Featured Product</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-primary/70 hover:text-on-primary transition-colors"
+                href="../index.html"
+                >Back to Home</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-headline-md text-[18px] mb-6 font-semibold">
+            Stay in Focus
+          </h4>
+          <p class="font-body-md text-body-md text-on-primary/70 mb-4">
+            Subscribe for exclusive offers and photography tips.
+          </p>
+          <form class="flex flex-col gap-3">
+            <input
+              class="bg-surface-container-highest/20 border border-surface-container-highest/30 rounded-lg px-4 py-3 font-body-md text-on-primary placeholder:text-on-primary/50 focus:outline-none focus:ring-2 focus:ring-secondary"
+              placeholder="Email address"
+              type="email"
+            />
+            <button
+              class="bg-secondary text-on-secondary font-label-md text-label-md py-3 rounded-lg hover:bg-secondary-container transition-colors focus:ring-2 ring-secondary dark:ring-secondary-container"
+              type="button"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+      <div
+        class="max-w-container-max mx-auto px-margin-desktop pt-8 border-t border-surface-container-highest/30 flex flex-col md:flex-row items-center justify-between gap-4 font-label-sm text-label-sm text-on-primary/60"
+      >
+        <p>© 2026 Camera Store. All rights reserved.</p>
+        <div class="flex items-center gap-6">
+          <a class="hover:text-on-primary transition-colors" href="./about.html"
+            >About</a
+          >
+          <a
+            class="hover:text-on-primary transition-colors"
+            href="./contact.html"
+            >Contact</a
+          >
+          <a class="hover:text-on-primary transition-colors" href="./cart.html"
+            >Cart</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,746 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Shopping Cart | Camera Store</title>
+    <meta name="description" content="View your shopping cart and securely checkout your photography gear at Camera Store." />
+    <meta name="robots" content="noindex, nofollow" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="../js/tailwind-config.js?v=20260621b"></script>
+    <link href="../css/reset.css" rel="stylesheet" />
+    <link href="../css/variables.css" rel="stylesheet" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/layout.css" rel="stylesheet" />
+    <link href="../css/components.css" rel="stylesheet" />
+    <link href="../css/pages/cart.css" rel="stylesheet" />
+  </head>
+  <body
+    data-page="cart"
+    class="bg-background text-on-background font-body-md min-h-screen flex flex-col"
+  >
+    <!-- Top Info Bar -->
+    <div
+      class="bg-primary text-on-primary py-2 px-margin-mobile md:px-margin-desktop text-label-sm font-label-sm hidden md:flex justify-between items-center"
+    >
+      <div class="flex items-center gap-4">
+        <span class="flex items-center gap-1"
+          ><span class="material-symbols-outlined text-[16px]">call</span>
+          Hotline: +84 (28) 3822 1234</span
+        >
+        <span class="flex items-center gap-1"
+          ><span class="material-symbols-outlined text-[16px]"
+            >location_on</span
+          >
+          Find a Store</span
+        >
+      </div>
+      <div class="flex items-center gap-4">
+        <a class="hover:text-secondary transition-colors" href="./contact.html"
+          >Support</a
+        >
+        <a class="hover:text-secondary transition-colors" href="./cart.html"
+          >Track Order</a
+        >
+      </div>
+    </div>
+    <header
+      class="bg-surface/90 backdrop-blur-md dark:bg-inverse-surface/90 text-primary dark:text-inverse-primary border-b border-outline-variant dark:border-outline shadow-sm dark:shadow-none sticky top-0 w-full z-50 transition-all duration-300"
+      id="main-nav"
+    >
+      <div
+        class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col justify-center h-auto md:h-20 py-4 md:py-0"
+      >
+        <div class="flex items-center justify-between gap-4 md:gap-8">
+          <a
+            class="text-headline-md font-headline-md font-bold tracking-tighter text-primary dark:text-inverse-primary shrink-0 flex items-center gap-2"
+            href="../index.html"
+          >
+            <span
+              class="material-symbols-outlined text-[28px] fill text-primary"
+              >camera</span
+            >
+            Camera Store
+          </a>
+          <div class="flex-1 max-w-2xl hidden md:flex relative group">
+            <input
+              class="w-full bg-surface-container-low border border-outline-variant rounded-full py-2 px-6 pl-12 focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all font-body-md text-body-md placeholder:text-outline text-on-surface group-hover:bg-surface-container-high"
+              placeholder="Search for cameras, lenses, accessories..."
+              type="text"
+            />
+            <span
+              class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline"
+              >search</span
+            >
+          </div>
+          <div class="flex items-center gap-2 md:gap-4 shrink-0">
+            <a
+              aria-label="About Us"
+              class="p-2 text-on-surface-variant hover:bg-surface-container-low rounded-full transition-all duration-200 hover:text-primary active:opacity-80 active:scale-95 hidden md:flex"
+              href="./about.html"
+            >
+              <span class="material-symbols-outlined">person</span>
+            </a>
+            <a
+              aria-label="Contact Us"
+              class="p-2 text-on-surface-variant hover:bg-surface-container-low rounded-full transition-all duration-200 hover:text-primary active:opacity-80 active:scale-95"
+              href="./contact.html"
+            >
+              <span class="material-symbols-outlined">favorite</span>
+            </a>
+            <a
+              aria-label="Shopping Cart"
+              class="p-2 text-on-surface-variant hover:bg-surface-container-low rounded-full transition-all duration-200 hover:text-primary active:opacity-80 active:scale-95 relative"
+              href="./cart.html"
+            >
+              <span class="material-symbols-outlined">shopping_cart</span>
+              <span
+                class="absolute top-1 right-1 w-2 h-2 bg-secondary rounded-full"
+              ></span>
+            </a>
+            <button
+              aria-label="Menu"
+              class="p-2 text-on-surface-variant hover:bg-surface-container-low rounded-full transition-all duration-200 hover:text-primary md:hidden"
+              id="mobile-menu-btn"
+            >
+              <span class="material-symbols-outlined">menu</span>
+            </button>
+          </div>
+        </div>
+        <nav
+          aria-label="Main Navigation"
+          class="hidden md:flex items-center justify-center gap-8 mt-4 md:mt-0 pt-2 md:pt-0"
+        >
+          <a
+            class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors font-label-md text-label-md"
+            href="./product-list.html"
+            >Cameras</a
+          >
+          <a
+            class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors font-label-md text-label-md"
+            href="./product-list.html"
+            >Lenses</a
+          >
+          <a
+            class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors font-label-md text-label-md"
+            href="./product-list.html"
+            >Used Gear</a
+          >
+          <a
+            class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors font-label-md text-label-md"
+            href="./product-list.html"
+            >Action Cameras</a
+          >
+          <a
+            class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors font-label-md text-label-md"
+            href="./product-list.html"
+            >Drones</a
+          >
+          <a
+            class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors font-label-md text-label-md"
+            href="./product-list.html"
+            >Studio</a
+          >
+        </nav>
+      </div>
+    </header>
+    <div
+      class="fixed inset-0 bg-surface z-40 transform translate-x-full transition-transform duration-300 md:hidden pt-24 px-margin-mobile flex flex-col gap-6"
+      id="mobile-menu"
+    >
+      <div class="relative">
+        <input
+          class="w-full bg-surface-container-low border border-outline-variant rounded-full py-2 px-6 pl-12 focus:outline-none focus:ring-2 focus:ring-secondary font-body-md text-body-md"
+          placeholder="Search..."
+          type="text"
+        />
+        <span
+          class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline"
+          >search</span
+        >
+      </div>
+      <nav class="flex flex-col gap-4 font-headline-md text-headline-md">
+        <a
+          class="text-on-surface-variant pl-4 hover:text-primary"
+          href="./product-list.html"
+          >Cameras</a
+        >
+        <a
+          class="text-on-surface-variant pl-4 hover:text-primary"
+          href="./product-list.html"
+          >Lenses</a
+        >
+        <a
+          class="text-on-surface-variant pl-4 hover:text-primary"
+          href="./product-list.html"
+          >Used Gear</a
+        >
+        <a
+          class="text-on-surface-variant pl-4 hover:text-primary"
+          href="./product-list.html"
+          >Action Cameras</a
+        >
+        <a
+          class="text-on-surface-variant pl-4 hover:text-primary"
+          href="./product-list.html"
+          >Drones</a
+        >
+        <a
+          class="text-on-surface-variant pl-4 hover:text-primary"
+          href="./product-list.html"
+          >Studio</a
+        >
+      </nav>
+    </div>
+    <!-- Main Content -->
+    <main
+      class="flex-grow max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 w-full"
+    >
+      <div class="mb-8">
+        <h1
+          class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-2"
+        >
+          Shopping Cart
+        </h1>
+        <p class="font-body-md text-body-md text-on-surface-variant">
+          Review your items before proceeding to checkout.
+        </p>
+      </div>
+      <div class="flex flex-col lg:flex-row gap-gutter relative">
+        <!-- Cart Items Section -->
+        <div class="flex-grow flex flex-col gap-6 w-full lg:w-2/3">
+          <!-- Item 1 -->
+          <div
+            class="bg-surface-container-lowest rounded-2xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-outline-variant p-6 flex flex-col sm:flex-row gap-6 items-start sm:items-center relative"
+          >
+            <div
+              class="w-full sm:w-32 h-32 flex-shrink-0 bg-surface-container rounded-xl overflow-hidden flex items-center justify-center p-2"
+            >
+              <img
+                class="object-contain w-full h-full mix-blend-multiply"
+                data-alt="A high-resolution product photography shot of a Sony A7R V Mirrorless Camera body. The camera is centered against a pristine white background. The lighting is soft and studio-quality, emphasizing the matte black finish of the camera body, the textured grip, and the intricate details of the dials and buttons. The overall aesthetic is clean, modern, and highly technical, fitting for a premium electronics retail site. A subtle shadow grounds the product, creating depth without clutter."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBePjddmFuAgAiMGeVl6knPtoE0pOI-O_ndseT8X6FhuicRo7_uR89gjbS-pAEgsE0JYRgAs2tZShrPamAtAWp1YeggCUPfhRqWhDQctyOHDkOqZfM6OkTbJ15K5UhUSZzZDvu6x8BNbDwUIqyateuZ9I3BbC_tnALpHb8WIuvseCuCrcRjPhYeSxyJVTCDFUgfFlO0pIMZP6O2jq5Ha9qqkHmKrwIxyFCgs2dZlLLzICAlOWXffosP_KYZIHiQ-yOX8qx7-HqAF-s"
+              />
+            </div>
+            <div class="flex-grow flex flex-col gap-2 w-full">
+              <div class="flex justify-between items-start gap-4">
+                <div>
+                  <h3
+                    class="font-headline-md text-[20px] leading-tight text-on-surface font-semibold mb-1"
+                  >
+                    Sony A7R V Mirrorless Camera (Body Only)
+                  </h3>
+                  <p class="font-label-sm text-label-sm text-outline">
+                    SKU: SNYA7RVB
+                  </p>
+                </div>
+                <button
+                  aria-label="Remove item"
+                  class="text-outline hover:text-error transition-colors p-1"
+                >
+                  <span class="material-symbols-outlined">delete</span>
+                </button>
+              </div>
+              <div class="flex justify-between items-end mt-4">
+                <div
+                  class="flex items-center bg-surface-container-low border border-outline-variant rounded-lg h-10 w-32"
+                >
+                  <button
+                    class="w-10 h-full flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors"
+                  >
+                    <span class="material-symbols-outlined text-[20px]"
+                      >remove</span
+                    >
+                  </button>
+                  <input
+                    aria-label="Quantity"
+                    class="w-full h-full bg-transparent border-none text-center font-label-md text-label-md text-on-surface focus:ring-0 p-0"
+                    type="text"
+                    value="1"
+                  />
+                  <button
+                    class="w-10 h-full flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors"
+                  >
+                    <span class="material-symbols-outlined text-[20px]"
+                      >add</span
+                    >
+                  </button>
+                </div>
+                <div
+                  class="font-headline-md text-headline-md text-on-surface font-semibold"
+                >
+                  $3,899.99
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div
+            class="bg-surface-container-lowest rounded-2xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-outline-variant p-6 flex flex-col sm:flex-row gap-6 items-start sm:items-center relative"
+          >
+            <div
+              class="w-full sm:w-32 h-32 flex-shrink-0 bg-surface-container rounded-xl overflow-hidden flex items-center justify-center p-2"
+            >
+              <img
+                class="object-contain w-full h-full mix-blend-multiply"
+                data-alt="A professional product shot of a Sony FE 24-70mm f/2.8 GM II Lens. The lens stands upright, captured in sharp focus against a clean white backdrop. The studio lighting highlights the metallic accents, the grooved focus ring, and the prominent red G Master logo. The front glass element reflects a soft, diffused light, indicating premium optical quality. The composition is minimalist and authoritative, reinforcing a high-end photography brand identity."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4u7VJiK0kd7DqnHr5CmcfeskSixw0LzWeRZPcOmMc6Vyi0jYWF4m6S-Vx-QTIKafWqHiilpgcPXMJqlgsx0fPWbPweF2uZ0hJVha8d55kxxJ4PSL85h51xCLnCcl5V7cgXoJgq90IdoZMv-3vcaDvfo229HY1w-NXJjumIUTPBrXDbu6BrbvYPcQcnXkyCBzfjWlrc3_SQTQzJoH0IDqcLhbvkr9fYcCNKOwkxJGppiSQuzElHQrvP9ZnMhNsoftFQ9FV4ev9CY0"
+              />
+            </div>
+            <div class="flex-grow flex flex-col gap-2 w-full">
+              <div class="flex justify-between items-start gap-4">
+                <div>
+                  <h3
+                    class="font-headline-md text-[20px] leading-tight text-on-surface font-semibold mb-1"
+                  >
+                    Sony FE 24-70mm f/2.8 GM II Lens
+                  </h3>
+                  <p class="font-label-sm text-label-sm text-outline">
+                    SKU: SNY2470GM2
+                  </p>
+                </div>
+                <button
+                  aria-label="Remove item"
+                  class="text-outline hover:text-error transition-colors p-1"
+                >
+                  <span class="material-symbols-outlined">delete</span>
+                </button>
+              </div>
+              <div class="flex justify-between items-end mt-4">
+                <div
+                  class="flex items-center bg-surface-container-low border border-outline-variant rounded-lg h-10 w-32"
+                >
+                  <button
+                    class="w-10 h-full flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors"
+                  >
+                    <span class="material-symbols-outlined text-[20px]"
+                      >remove</span
+                    >
+                  </button>
+                  <input
+                    aria-label="Quantity"
+                    class="w-full h-full bg-transparent border-none text-center font-label-md text-label-md text-on-surface focus:ring-0 p-0"
+                    type="text"
+                    value="1"
+                  />
+                  <button
+                    class="w-10 h-full flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors"
+                  >
+                    <span class="material-symbols-outlined text-[20px]"
+                      >add</span
+                    >
+                  </button>
+                </div>
+                <div
+                  class="font-headline-md text-headline-md text-on-surface font-semibold"
+                >
+                  $2,298.00
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Order Summary Sidebar -->
+        <div class="w-full lg:w-1/3">
+          <div
+            class="bg-surface-container-lowest rounded-2xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-outline-variant p-6 sticky top-28"
+          >
+            <h2
+              class="font-headline-md text-headline-md text-on-surface mb-6 border-b border-outline-variant pb-4"
+            >
+              Order Summary
+            </h2>
+            <!-- Promo Code -->
+            <div class="mb-6 pb-6 border-b border-outline-variant">
+              <label
+                class="block font-label-sm text-label-sm text-on-surface-variant mb-2"
+                for="promo"
+                >Summer Gear Sale Promo Code</label
+              >
+              <div class="flex gap-2">
+                <input
+                  class="flex-grow bg-surface-container-low border border-outline-variant rounded-lg px-4 py-2 font-body-md text-body-md focus:ring-1 focus:ring-primary focus:border-primary transition-shadow"
+                  id="promo"
+                  placeholder="Enter code"
+                  type="text"
+                />
+                <button
+                  class="bg-primary text-on-primary font-label-md px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors"
+                >
+                  Apply
+                </button>
+              </div>
+            </div>
+            <!-- Breakdown -->
+            <div
+              class="flex flex-col gap-3 font-body-md text-body-md text-on-surface-variant mb-6"
+            >
+              <div class="flex justify-between">
+                <span>Subtotal</span>
+                <span class="text-on-surface font-medium">$6,197.99</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Estimated Shipping</span>
+                <span class="text-secondary font-medium">Free</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Tax (Calculated at checkout)</span>
+                <span class="text-on-surface font-medium">--</span>
+              </div>
+            </div>
+            <!-- Total -->
+            <div
+              class="flex justify-between items-center border-t border-outline-variant pt-4 mb-6"
+            >
+              <span class="font-headline-md text-headline-md text-on-surface"
+                >Total</span
+              >
+              <span
+                class="font-headline-lg text-[28px] leading-tight text-on-surface font-bold"
+                >$6,197.99</span
+              >
+            </div>
+            <!-- Checkout Button -->
+            <button
+              class="w-full bg-secondary text-on-primary font-label-md text-[16px] py-4 rounded-lg hover:bg-secondary/90 transition-colors shadow-sm flex items-center justify-center gap-2 mb-4"
+            >
+              Proceed to Checkout
+              <span class="material-symbols-outlined text-[20px]"
+                >arrow_forward</span
+              >
+            </button>
+            <a
+              class="block text-center font-label-md text-label-md text-primary hover:underline underline-offset-4"
+              href="./product-list.html"
+              >Continue Shopping</a
+            >
+            <!-- Trust Markers -->
+            <div class="mt-8 pt-6 border-t border-outline-variant">
+              <div
+                class="flex items-center gap-3 mb-4 text-on-surface-variant font-label-sm text-label-sm"
+              >
+                <span class="material-symbols-outlined text-[20px]"
+                  >verified</span
+                >
+                Official Manufacturer Warranty
+              </div>
+              <div
+                class="flex items-center gap-3 mb-6 text-on-surface-variant font-label-sm text-label-sm"
+              >
+                <span class="material-symbols-outlined text-[20px]"
+                  >restart_alt</span
+                >
+                30-Day Hassle-Free Returns
+              </div>
+              <div class="flex justify-center gap-2 opacity-60">
+                <!-- Placeholder for payment icons -->
+                <div
+                  class="w-10 h-6 bg-surface-container rounded flex items-center justify-center text-[10px] font-bold"
+                >
+                  VISA
+                </div>
+                <div
+                  class="w-10 h-6 bg-surface-container rounded flex items-center justify-center text-[10px] font-bold"
+                >
+                  MC
+                </div>
+                <div
+                  class="w-10 h-6 bg-surface-container rounded flex items-center justify-center text-[10px] font-bold"
+                >
+                  PAY
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Upsell Section -->
+      <section class="mt-section-gap">
+        <h2 class="font-headline-md text-headline-md text-on-surface mb-6">
+          Recommended for You
+        </h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+          <!-- Accessory 1 -->
+          <div
+            class="bg-surface-container-lowest rounded-2xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-outline-variant p-4 flex flex-col hover:shadow-[0px_10px_30px_rgba(0,0,0,0.08)] transition-shadow duration-300"
+          >
+            <div
+              class="aspect-square bg-surface-container rounded-xl mb-4 p-2 flex items-center justify-center"
+            >
+              <img
+                class="object-contain w-full h-full mix-blend-multiply"
+                data-alt="A high-angle studio shot of a SanDisk Extreme Pro 128GB SDXC memory card. The small black card with its distinctive gold and red labeling rests on a pristine white surface. Lighting is sharp and focused, highlighting the textured plastic and the metallic contacts. The composition is simple and technical, emphasizing reliability and speed, key traits for a professional photography audience."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC16xPl-DxnqlrEnDZFCX8hymR-PUPDQdnRKS1nQyQWd0uPm2_lSa6lpo7oKc3RvqSSzEK1056le6HUjKDWPXQTxqI77ilYTrUzo37XQHnX4kzt9oXcSsDCjyLh4a7mZCOQqvmvSvp4wPWmYub-Qv_vgWjn5l_H2y5xW_2Y2kfPTq0_uOfYlt0OQC9FMJ3qz88KHZb7abc0Us-FZlSGJr79bWMrTd5Qwfg27cgg-L7OqXZT9fqlPl-IfOPc8BGQ2sluma6TlslKMTA"
+              />
+            </div>
+            <h4
+              class="font-label-md text-label-md text-on-surface font-semibold mb-1 line-clamp-2"
+            >
+              Pro SDXC UHS-II Card 128GB
+            </h4>
+            <p class="font-body-md text-body-md text-on-surface-variant mb-4">
+              $149.99
+            </p>
+            <button
+              class="mt-auto w-full bg-surface-container-high text-on-surface font-label-sm text-label-sm py-2 rounded-lg hover:bg-primary hover:text-on-primary transition-colors"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <!-- Accessory 2 -->
+          <div
+            class="bg-surface-container-lowest rounded-2xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-outline-variant p-4 flex flex-col hover:shadow-[0px_10px_30px_rgba(0,0,0,0.08)] transition-shadow duration-300"
+          >
+            <div
+              class="aspect-square bg-surface-container rounded-xl mb-4 p-2 flex items-center justify-center"
+            >
+              <img
+                class="object-contain w-full h-full mix-blend-multiply"
+                data-alt="A clean product shot of a spare Sony NP-FZ100 rechargeable battery. The rectangular black battery pack sits against a solid white background. The lighting is even, ensuring the branding and technical specifications printed on the battery are legible. The image feels clinical and necessary, a vital power accessory for the main camera product."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAVdN-vaLb4tLAFrpelSzKyDddMkXNVXUNMnaHS2t-I7YvdI9rmgFxKXuf_hshJ4oeSNDm-JSB2pUkxIqf7tBcFBAfGxcU_IclADHOQjMSx-LOWZTP0TT5ZWcuOcdD221VPLY3rjuiNCp9fw6631zADPFO-yC7hD9LHlyqSgGuoxQl3tOCb7cpNqUGQAeyEhBVU6GL1JOL9t0QmNfAd02OQPi7y6YnIFYBtBNmMJhtcX2ZYlTTngsjcW9QlnVni3IA7I_iy6OwnhY"
+              />
+            </div>
+            <h4
+              class="font-label-md text-label-md text-on-surface font-semibold mb-1 line-clamp-2"
+            >
+              NP-FZ100 Rechargeable Battery
+            </h4>
+            <p class="font-body-md text-body-md text-on-surface-variant mb-4">
+              $78.00
+            </p>
+            <button
+              class="mt-auto w-full bg-surface-container-high text-on-surface font-label-sm text-label-sm py-2 rounded-lg hover:bg-primary hover:text-on-primary transition-colors"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <!-- Accessory 3 -->
+          <div
+            class="bg-surface-container-lowest rounded-2xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-outline-variant p-4 flex flex-col hover:shadow-[0px_10px_30px_rgba(0,0,0,0.08)] transition-shadow duration-300"
+          >
+            <div
+              class="aspect-square bg-surface-container rounded-xl mb-4 p-2 flex items-center justify-center"
+            >
+              <img
+                class="object-contain w-full h-full mix-blend-multiply"
+                data-alt="A front-facing view of a premium black canvas camera messenger bag. The bag is placed on a bright white background, illuminated to show the texture of the durable fabric and the sturdy metal buckles. The design is minimalist and sleek, suggesting robust protection for expensive gear without looking overly utilitarian. The overall mood is professional and stylish."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBy2fZ6on31djydlfKRo2zG3mqQcApJZObvT46GUts36yIVxdHPB1q5aXmKgUjVw01OMCLWcuYupNu7Qn30MjaoxiZqrYOFs8ei812ZoTzwG8bBXURsk-_65z7XfZxKbx7DJT8e_WSU3IuYNuO_dJW439RlMFJ9cGHP_vqmA6qzM1VCeXwsC_qj3JWK1LfBJ2lRhBucvPYxJr6r-bXrXIsJ2RrIvzDpPcHKvd9p5lBN78Dp5oQC88g-NbD-A7VNPRexMcxeFFAmgZs"
+              />
+            </div>
+            <h4
+              class="font-label-md text-label-md text-on-surface font-semibold mb-1 line-clamp-2"
+            >
+              Everyday Messenger Bag V2
+            </h4>
+            <p class="font-body-md text-body-md text-on-surface-variant mb-4">
+              $219.95
+            </p>
+            <button
+              class="mt-auto w-full bg-surface-container-high text-on-surface font-label-sm text-label-sm py-2 rounded-lg hover:bg-primary hover:text-on-primary transition-colors"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <!-- Accessory 4 -->
+          <div
+            class="bg-surface-container-lowest rounded-2xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-outline-variant p-4 flex flex-col hover:shadow-[0px_10px_30px_rgba(0,0,0,0.08)] transition-shadow duration-300"
+          >
+            <div
+              class="aspect-square bg-surface-container rounded-xl mb-4 p-2 flex items-center justify-center"
+            >
+              <img
+                class="object-contain w-full h-full mix-blend-multiply"
+                data-alt="A detailed image of an 82mm circular polarizing filter resting on a white surface. The thin metallic rim of the filter catches the light, while the dark glass center reflects a soft, neutral tone. The product photography is precise and clean, emphasizing the optical clarity and precision engineering of the lens accessory. The aesthetic is high-end and technical."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuTLkqnCuUwTXnN2YWKYSZEzu4gioxwgrOTkFL-EbXMUnp8J8kvmoOvPbJC541JKw8jEi6NEf5hBgEXzDxJ05YgOhFYJmiNb70pknIh-KTNnHRd4IcLALt9fWLUBb-TVvxnC4KDR44HO_wtiJnPaiZyrVfNldqyzivwXat7drekuPdKQmtx5VrD7_kdSsOWlYmHc8dWMCjUDjvj3Us_aZeHAhwi_bR7ilWvwX443sRIuGdEwM7n_AKRV_tKQLPLPYzT5wRuY2WnLs"
+              />
+            </div>
+            <h4
+              class="font-label-md text-label-md text-on-surface font-semibold mb-1 line-clamp-2"
+            >
+              82mm Circular Polarizer Filter
+            </h4>
+            <p class="font-body-md text-body-md text-on-surface-variant mb-4">
+              $129.00
+            </p>
+            <button
+              class="mt-auto w-full bg-surface-container-high text-on-surface font-label-sm text-label-sm py-2 rounded-lg hover:bg-primary hover:text-on-primary transition-colors"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="bg-primary dark:bg-surface-container-highest text-on-primary dark:text-on-surface w-full pt-section-gap pb-8"
+    >
+      <div
+        class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter mb-16"
+      >
+        <div class="col-span-1">
+          <a
+            class="text-headline-lg font-headline-lg font-black text-on-primary dark:text-on-surface flex items-center gap-2 mb-6"
+            href="../index.html"
+          >
+            <span class="material-symbols-outlined text-[32px] fill"
+              >camera</span
+            >
+            Camera Store
+          </a>
+          <p
+            class="font-body-md text-body-md text-on-primary/70 dark:text-on-surface-variant/70 mb-6"
+          >
+            Precision Engineering for Professionals. Equipping creators with the
+            finest imaging technology.
+          </p>
+          <div class="flex items-center gap-4">
+            <a
+              class="w-10 h-10 rounded-full bg-surface-container-highest/20 flex items-center justify-center hover:bg-secondary transition-colors text-on-primary"
+              href="./about.html"
+            >
+              <span class="material-symbols-outlined text-[20px]">share</span>
+            </a>
+            <a
+              class="w-10 h-10 rounded-full bg-surface-container-highest/20 flex items-center justify-center hover:bg-secondary transition-colors text-on-primary"
+              href="./contact.html"
+            >
+              <span class="material-symbols-outlined text-[20px]"
+                >photo_camera</span
+              >
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-headline-md text-[18px] mb-6 font-semibold">Shop</h4>
+          <ul class="flex flex-col gap-4 font-body-md text-body-md">
+            <li>
+              <a
+                class="text-on-primary/70 hover:text-on-primary transition-colors"
+                href="./product-list.html"
+                >Cameras</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-primary/70 hover:text-on-primary transition-colors"
+                href="./product-list.html"
+                >Lenses</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-primary/70 hover:text-on-primary transition-colors"
+                href="./product-list.html"
+                >Drones</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-primary/70 hover:text-on-primary transition-colors"
+                href="./product-list.html"
+                >Used Gear</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-secondary font-bold hover:text-secondary-container transition-colors"
+                href="./product-list.html"
+                >Special Offers</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-headline-md text-[18px] mb-6 font-semibold">
+            Support
+          </h4>
+          <ul class="flex flex-col gap-4 font-body-md text-body-md">
+            <li>
+              <a
+                class="text-on-primary/70 hover:text-on-primary transition-colors"
+                href="./contact.html"
+                >Contact Us</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-primary/70 hover:text-on-primary transition-colors"
+                href="./about.html"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-primary/70 hover:text-on-primary transition-colors"
+                href="./cart.html"
+                >Track Order</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-primary/70 hover:text-on-primary transition-colors"
+                href="./product-detail-sony-a7rv.html"
+                >Featured Product</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-primary/70 hover:text-on-primary transition-colors"
+                href="../index.html"
+                >Back to Home</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-headline-md text-[18px] mb-6 font-semibold">
+            Stay in Focus
+          </h4>
+          <p class="font-body-md text-body-md text-on-primary/70 mb-4">
+            Subscribe for exclusive offers and photography tips.
+          </p>
+          <form class="flex flex-col gap-3">
+            <input
+              class="bg-surface-container-highest/20 border border-surface-container-highest/30 rounded-lg px-4 py-3 font-body-md text-on-primary placeholder:text-on-primary/50 focus:outline-none focus:ring-2 focus:ring-secondary"
+              placeholder="Email address"
+              type="email"
+            />
+            <button
+              class="bg-secondary text-on-secondary font-label-md text-label-md py-3 rounded-lg hover:bg-secondary-container transition-colors focus:ring-2 ring-secondary dark:ring-secondary-container"
+              type="button"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+      <div
+        class="max-w-container-max mx-auto px-margin-desktop pt-8 border-t border-surface-container-highest/30 flex flex-col md:flex-row items-center justify-between gap-4 font-label-sm text-label-sm text-on-primary/60"
+      >
+        <p>© 2026 Camera Store. All rights reserved.</p>
+        <div class="flex items-center gap-6">
+          <a class="hover:text-on-primary transition-colors" href="./about.html"
+            >About</a
+          >
+          <a
+            class="hover:text-on-primary transition-colors"
+            href="./contact.html"
+            >Contact</a
+          >
+          <a class="hover:text-on-primary transition-colors" href="./cart.html"
+            >Cart</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

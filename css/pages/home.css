@@ -1,0 +1,146 @@
+body[data-page="home"] {
+  background-color: var(--color-background);
+}
+
+.sale-banner-carousel {
+  background: var(--color-surface-container-low);
+  box-shadow: var(--shadow-card);
+}
+
+.sale-banner-slide {
+  /* Transition handled by Tailwind in HTML */
+}
+
+.sale-banner-slide__image {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.sale-banner-carousel__dots {
+  position: absolute;
+  left: 50%;
+  bottom: 1.5rem;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  transform: translateX(-50%);
+}
+
+.sale-banner-dot {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 9999px;
+  opacity: 0.95;
+  cursor: pointer;
+  transition: transform 0.25s ease, background-color 0.25s ease, opacity 0.25s ease;
+}
+
+.sale-banner-dot:hover {
+  transform: scale(1.1);
+}
+
+.sale-banner-dot[aria-pressed="true"] {
+  opacity: 1;
+}
+
+.brand-marquee {
+  position: relative;
+  overflow: hidden;
+  padding: 1rem 0 0.25rem;
+}
+
+.brand-marquee__track {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  width: max-content;
+  animation: brand-marquee-scroll 70s linear infinite;
+}
+
+.brand-marquee:hover .brand-marquee__track {
+  animation-play-state: paused;
+}
+
+.brand-marquee__item {
+  display: inline-flex;
+  align-items: center;
+  min-width: max-content;
+  padding: 0;
+  position: relative;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  opacity: 0.88;
+}
+
+.brand-marquee__item::after {
+  content: "";
+  width: 1px;
+  height: 1.35rem;
+  margin-left: 1.25rem;
+  background: linear-gradient(180deg, rgba(196, 199, 199, 0), rgba(196, 199, 199, 0.8), rgba(196, 199, 199, 0));
+}
+
+.brand-marquee__item:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.brand-marquee__name {
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  color: var(--color-primary);
+  line-height: 1;
+  opacity: 0.92;
+}
+
+.brand-marquee__fade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 4rem;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.brand-marquee__fade--left {
+  left: 0;
+  background: linear-gradient(90deg, var(--color-surface), rgba(248, 249, 250, 0));
+}
+
+.brand-marquee__fade--right {
+  right: 0;
+  background: linear-gradient(270deg, var(--color-surface), rgba(248, 249, 250, 0));
+}
+
+@keyframes brand-marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 0.5rem));
+  }
+}
+
+@media (max-width: 768px) {
+  .sale-banner-carousel__dots {
+    bottom: 1rem;
+    gap: 0.45rem;
+  }
+
+  .brand-marquee {
+    padding: 0.8rem 0 0.15rem;
+  }
+
+  .brand-marquee__name {
+    font-size: 1.08rem;
+  }
+
+  .brand-marquee__item::after {
+    height: 1rem;
+    margin-left: 0.75rem;
+  }
+}
